@@ -45,11 +45,10 @@
   margin-top: 4rem;
 }
 
-.contact-image-div > img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 1.5rem;
-  margin-top: -4rem;
+.contact-avatar-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Media Query */
@@ -81,7 +80,11 @@
     font-size: 20px;
   }
 
-  .contact-image-div {
-    display: none;
+  .contact-div-main {
+    flex-direction: column;
+  }
+
+  .contact-avatar-div {
+    margin-top: 2rem;
   }
 }

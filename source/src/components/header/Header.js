@@ -5,6 +5,7 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
+  educationInfo,
   workExperiences,
   skillsSection,
   projectSection,
@@ -40,6 +41,11 @@ function Header() {
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>
+            </li>
+          )}
+          {educationInfo.display && (
+            <li>
+              <a href="#education">Education</a>
             </li>
           )}
           {viewExperience && (

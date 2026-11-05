@@ -44,52 +44,47 @@ export default function Skills() {
               {skillsSection.subTitle}
             </p>
             <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
-            </div>
           </div>
         </Fade>
       </div>
+      <Fade bottom duration={1000}>
+        <div className="what-i-do-div">
+          {skillsSection.skills.map(item => (
+            <div
+              key={item.title}
+              className={
+                isDark ? "dark-card-mode what-i-do-card" : "what-i-do-card"
+              }
+            >
+              <i className={item.icon + " what-i-do-icon"}></i>
+              <h3 className="what-i-do-title">{item.title}</h3>
+              <p className="what-i-do-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Fade>
       {skillsSection.skillGroups && (
         <Fade bottom duration={1000}>
           <div className="skill-groups-div">
-            {skillsSection.skillGroups.map(group => {
-              return (
-                <div key={group.title} className="skill-group-item">
-                  <p
-                    className={
-                      isDark
-                        ? "dark-mode skill-group-title"
-                        : "skill-group-title"
-                    }
-                  >
-                    {group.title}
-                  </p>
-                  <p
-                    className={
-                      isDark
-                        ? "dark-mode skill-group-items"
-                        : "skill-group-items"
-                    }
-                  >
-                    {group.items.join(" · ")}
-                  </p>
-                </div>
-              );
-            })}
+            {skillsSection.skillGroups.map(group => (
+              <div
+                key={group.title}
+                className={
+                  isDark
+                    ? "dark-card-mode skill-group-item"
+                    : "skill-group-item"
+                }
+              >
+                <p className="skill-group-title">{group.title}</p>
+                <ul className="skill-chip-list">
+                  {group.items.map(item => (
+                    <li key={item} className="skill-chip">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </Fade>
       )}

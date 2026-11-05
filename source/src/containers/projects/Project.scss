@@ -9,10 +9,20 @@
   height: auto;
 }
 
+.project-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 3rem 0 1rem 0;
+}
+
 .repo-cards-div-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  gap: 1.25rem;
+}
+
+.project-inprep-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 420px));
 }
 
 /* Media Query */
@@ -26,7 +36,8 @@
     font-size: 30px;
     text-align: center;
   }
-  .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .project-subtitle {
+    font-size: 24px;
+    text-align: center;
   }
 }
