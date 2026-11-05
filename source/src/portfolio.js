@@ -293,14 +293,14 @@ const educationInfo = {
   schools: [
     {
       schoolName: "University of Tehran",
-      logo: require("./assets/images/uni_tehran.svg").default,
+      logo: process.env.PUBLIC_URL + "/logos/uni_tehran.svg",
       subHeader: "M.S. in Mechatronics Engineering (GPA 19.27/20, 4.0/4.0)",
       duration: "2025 – Present",
       desc: "College of Interdisciplinary Sciences & Technologies — ranked 1st (top student) in the 2025–26 master's cohort."
     },
     {
       schoolName: "University of Tabriz",
-      logo: require("./assets/images/uni_tabriz.svg").default,
+      logo: process.env.PUBLIC_URL + "/logos/uni_tabriz.svg",
       subHeader: "B.S. in Mechanical Engineering (GPA 18.25/20, 3.91/4.0)",
       duration: "2021 – 2025",
       desc: "Tabriz, Iran."
@@ -659,7 +659,6 @@ const achievementSection = {
     },
     {
       title: "Esteddad-e Derakhshan",
-      titleFa: "استعداد درخشان",
       subtitle:
         "National program for exceptionally talented students, with a capped study timeline and minimum GPA and credit requirements. Ranked 1st in the program and 3rd overall among the 2021 undergraduate entering cohort, University of Tabriz.",
       badge: {
