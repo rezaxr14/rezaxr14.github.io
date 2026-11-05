@@ -46,7 +46,7 @@
 }
 .achievement-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1rem 1rem;
 }
 .certificate-card-footer {
@@ -55,7 +55,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.certificate-card-footer span.certificate-tag {
+.certificate-card-footer .certificate-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -70,8 +70,79 @@
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 0.75em;
   cursor: pointer;
+  text-decoration: none;
   transition: 0.2s ease-in;
 }
-span.certificate-tag:hover {
+.certificate-tag:hover {
   background: $buttonHover;
+}
+
+/* Rank badges */
+.certificate-badge-div {
+  height: auto;
+  display: block;
+}
+.achievement-badge {
+  height: 190px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+.badge-gold {
+  background: linear-gradient(135deg, #f6c343, #d97706);
+}
+.badge-indigo {
+  background: linear-gradient(135deg, #6366f1, #3730a3);
+}
+.badge-teal {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+.badge-amber {
+  background: linear-gradient(135deg, #fb923c, #c2410c);
+}
+.badge-values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.badge-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.badge-value {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.badge-label {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+.badge-divider {
+  width: 2px;
+  height: 4.5rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.badge-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title-fa {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $titleColor;
 }

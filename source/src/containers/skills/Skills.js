@@ -7,6 +7,20 @@ import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
+// Greedy packing: put each group in the currently shortest column (by text
+// length) so the columns end at about the same height.
+function balanceColumns(groups, count) {
+  const cols = Array.from({length: count}, () => []);
+  const heights = new Array(count).fill(0);
+  groups.forEach(group => {
+    const weight = group.items.join(" ").length + 90;
+    const i = heights.indexOf(Math.min(...heights));
+    cols[i].push(group);
+    heights[i] += weight;
+  });
+  return cols;
+}
+
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
@@ -66,23 +80,27 @@ export default function Skills() {
       {skillsSection.skillGroups && (
         <Fade bottom duration={1000}>
           <div className="skill-groups-div">
-            {skillsSection.skillGroups.map(group => (
-              <div
-                key={group.title}
-                className={
-                  isDark
-                    ? "dark-card-mode skill-group-item"
-                    : "skill-group-item"
-                }
-              >
-                <p className="skill-group-title">{group.title}</p>
-                <ul className="skill-chip-list">
-                  {group.items.map(item => (
-                    <li key={item} className="skill-chip">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            {balanceColumns(skillsSection.skillGroups, 3).map((col, ci) => (
+              <div key={ci} className="skill-groups-column">
+                {col.map(group => (
+                  <div
+                    key={group.title}
+                    className={
+                      isDark
+                        ? "dark-card-mode skill-group-item"
+                        : "skill-group-item"
+                    }
+                  >
+                    <p className="skill-group-title">{group.title}</p>
+                    <ul className="skill-chip-list">
+                      {group.items.map(item => (
+                        <li key={item} className="skill-chip">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

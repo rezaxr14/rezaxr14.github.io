@@ -45,7 +45,7 @@ export default function Greeting() {
                     <a
                       className="main-button"
                       href={require("./resume.pdf")}
-                      download="Resume.pdf"
+                      download="Reza_Nadimi_Resume.pdf"
                     >
                       Download my resume
                     </a>

@@ -21,7 +21,7 @@ const greeting = {
   username: "Reza Nadimi",
   title: "Hi all, I'm Reza Nadimi",
   subTitle: emoji(
-    "AI/ML engineer (M.S. Mechatronics, University of Tehran) building agentic and vision-language systems end to end: RL fine-tuning (SFT → GRPO), tool-using agents, agent memory and calibrated evaluation, delivered through production full-stack, DevOps and mobile work. Hands-on background in embedded systems (STM32, PLC) and robotics control."
+    "I build intelligent systems that bring together modern AI research and practical software engineering. My work focuses on agentic AI, vision-language models, reinforcement learning, and multimodal systems, from fine-tuning models and developing tool-using agents to designing memory architectures and evaluation frameworks. I enjoy working across the development process, turning research ideas into complete, production-ready applications. Alongside my AI work, I have a strong background in full-stack development, backend engineering, DevOps, embedded systems, and robotics, allowing me to approach problems from a broader engineering perspective."
   ),
   resumeLink: "Reza_Nadimi_Resume.pdf",
   displayGreeting: true
@@ -212,7 +212,7 @@ const skillsSection = {
       ]
     },
     {
-      title: "Networking",
+      title: "Networking & Security",
       items: [
         "Wireshark",
         "nmap",
@@ -221,24 +221,15 @@ const skillsSection = {
         "SOCKS5",
         "WebSocket",
         "gRPC",
-        "CIDR scanning",
-        "Xray-core (VLESS, Trojan, VMess, Shadowsocks)",
+        "Xray-core",
         "DPI-evasion techniques",
-        "Clash / Sing-box formats"
-      ]
-    },
-    {
-      title: "Cybersecurity",
-      items: [
         "secure-by-design practices",
         "threat modeling",
         "least privilege",
         "RBAC & row-level security",
-        "secrets management",
         "rate limiting",
         "CSP",
-        "input validation",
-        "supply-chain security (Trivy, pip-audit, cosign, Dependabot, digest pinning)"
+        "supply-chain security (Trivy, pip-audit, cosign, Dependabot)"
       ]
     },
     {
@@ -338,8 +329,7 @@ const workExperiences = {
       desc: "Research on vision-language and multimodal LLMs.",
       descBullets: [
         "Conduct research on vision-language and multimodal LLMs, focusing on RL-based fine-tuning for performance and alignment.",
-        "Authored two preprint papers on agentic AI and harness engineering.",
-        "Preparing two further papers: AI in thermodynamics and AI in robotics."
+        "Preparing research papers on agentic AI and harness engineering, with further work applying AI to robotics and thermodynamics."
       ]
     },
     {
@@ -583,17 +573,20 @@ const projectSection = {
       ]
     },
     {
-      name: "Solar–Biomass Polygeneration Plant",
+      name: "VideoForge",
       subtitle:
-        "Coupled plant modeled with hand-written fixed-point/Newton–Raphson solvers and validated against the published reference design",
-      stack: ["MATLAB", "EES"],
-      image: require("./assets/projects/PowerPlant_Supercritical_CO2_KALINA.webp"),
-      links: [
-        {
-          name: "GitHub",
-          url: "https://github.com/rezaxr14/PowerPlant_Supercritical_CO2_KALINA"
-        }
-      ]
+        "Terminal UI for batch video re-encoding to HEVC, AV1 and H.264. Test-encodes to detect which GPU backends really work (NVENC, Quick Sync, AMF, VAAPI) and replaces files in place only after verification",
+      stack: [
+        "Python",
+        "Textual",
+        "FFmpeg",
+        "NVENC",
+        "Quick Sync",
+        "AMF",
+        "VAAPI"
+      ],
+      image: require("./assets/projects/video_forge.webp"),
+      links: [{name: "GitHub", url: "https://github.com/rezaxr14/video_forge"}]
     },
     {
       name: "Finite Element Analysis of a Dental Implant",
@@ -651,27 +644,37 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Ranked 1st — M.S. Cohort",
+      title: "Ranked 1st: M.S. Cohort",
       subtitle:
-        "Ranked 1st (top student) in the 2025–26 master's cohort, University of Tehran College of Interdisciplinary Sciences & Technologies.",
-      image: require("./assets/images/ach_rank1.png"),
-      imageAlt: "Ranked 1st in the master's cohort",
+        "Top student in the 2025–26 master's cohort, University of Tehran College of Interdisciplinary Sciences & Technologies.",
+      badge: {value: "1st", label: "Top student", tone: "gold"},
       footerLink: []
     },
     {
-      title: "Rank 35 — National Master's Entrance Exam",
+      title: "National Master's Entrance Exam",
       subtitle:
         "Rank 35 (99th+ percentile), Iranian National Master's Entrance Examination in Mechanical Engineering.",
-      image: require("./assets/images/ach_rank35.png"),
-      imageAlt: "Rank 35 in the national entrance exam",
+      badge: {value: "#35", label: "99th+ percentile", tone: "indigo"},
       footerLink: []
     },
     {
-      title: "Esteddad-e Derakhshan & National Elite Foundation",
+      title: "Esteddad-e Derakhshan",
+      titleFa: "استعداد درخشان",
       subtitle:
-        "Esteddad-e Derakhshan (national program for exceptionally talented students); National Elite Foundation (Bonyad Nokhbegan) Vezvaii Reward.",
-      image: require("./assets/images/ach_elite.png"),
-      imageAlt: "Elite programs",
+        "National program for exceptionally talented students, with a capped study timeline and minimum GPA and credit requirements. Ranked 1st in the program and 3rd overall among the 2021 undergraduate entering cohort, University of Tabriz.",
+      badge: {
+        value: "#1",
+        label: "in program",
+        value2: "#3",
+        label2: "overall",
+        tone: "teal"
+      },
+      footerLink: []
+    },
+    {
+      title: "National Elite Foundation",
+      subtitle: "National Elite Foundation (Bonyad Nokhbegan) Vezvaii Reward.",
+      badge: {icon: "fas fa-medal", label: "Vezvaii Reward", tone: "amber"},
       footerLink: []
     },
     {
