@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.f27b30e9.css",
-    "main.js": "/static/js/main.7fdde260.js",
-    "static/css/345.a4fdfa0a.chunk.css": "/static/css/345.a4fdfa0a.chunk.css",
-    "static/js/345.6ec3787e.chunk.js": "/static/js/345.6ec3787e.chunk.js",
+    "main.css": "/static/css/main.1a381020.css",
+    "main.js": "/static/js/main.e249d1dc.js",
+    "static/css/345.a2f0b7c7.chunk.css": "/static/css/345.a2f0b7c7.chunk.css",
+    "static/js/345.b1f0dd64.chunk.js": "/static/js/345.b1f0dd64.chunk.js",
     "static/media/resume.pdf": "/static/media/resume.8bf4242c7c43e9ca8879.pdf",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/FEM-dental-implant.webp": "/static/media/FEM-dental-implant.89fd11b9abc7f59fc186.webp",
@@ -11,29 +11,28 @@
     "static/media/VLM-DENTAL.webp": "/static/media/VLM-DENTAL.56ee470f3798bc887617.webp",
     "static/media/Autonomous-Firefighting-Robot.webp": "/static/media/Autonomous-Firefighting-Robot.9bccb1ab23254e1a9b48.webp",
     "static/media/WhatToCook_mobile_serverless.webp": "/static/media/WhatToCook_mobile_serverless.166f36a1ab0ed6d0c6b1.webp",
+    "static/media/solar-panel-cleaning-robot-2.webp": "/static/media/solar-panel-cleaning-robot-2.1343f861bea81b7ed715.webp",
     "static/media/abaqus-structural-analysis.webp": "/static/media/abaqus-structural-analysis.663dca9f69f09b2549b6.webp",
     "static/media/3D-Robot-Control-RL-Analytical.webp": "/static/media/3D-Robot-Control-RL-Analytical.5ae722fab112fdc2f9ab.webp",
     "static/media/Recap.webp": "/static/media/Recap.17d721128154ec0dc74b.webp",
-    "static/media/solar-panel-cleaning-robot.webp": "/static/media/solar-panel-cleaning-robot.c128d903b08fd50f4c72.webp",
-    "static/media/DentalForge.webp": "/static/media/DentalForge.0a6bb4ef668161d21c72.webp",
     "static/media/video_forge.webp": "/static/media/video_forge.eff030b39f5248a4139e.webp",
-    "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
     "static/media/STM32_PLC_MECH2_embedded.webp": "/static/media/STM32_PLC_MECH2_embedded.8d9e9ee6a2ac15ef1541.webp",
     "static/media/gas-turbine-cogeneration-orc-waste-heat-recovery.webp": "/static/media/gas-turbine-cogeneration-orc-waste-heat-recovery.ebb16b453bdcd664e238.webp",
     "static/media/Xray_Forge.webp": "/static/media/Xray_Forge.661d931b3956b9c4dbb6.webp",
+    "static/media/solar-panel-cleaning-robot.webp": "/static/media/solar-panel-cleaning-robot.addf44ae64cf6324caca.webp",
     "static/media/WhatToCook_Smart_Kitchen_OS.webp": "/static/media/WhatToCook_Smart_Kitchen_OS.8dade1dd86450a815af5.webp",
     "static/media/cart-pole-modern-control.webp": "/static/media/cart-pole-modern-control.65040ca291d8dc065fcd.webp",
-    "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/in-preparation.webp": "/static/media/in-preparation.2bec05e744e4b1f275b8.webp",
     "static/media/ach_cs50.png": "/static/media/ach_cs50.593365977e39e284821e.png",
+    "static/media/DentalForge.webp": "/static/media/DentalForge.d09a7e766f4262372a5c.webp",
     "index.html": "/index.html",
-    "main.f27b30e9.css.map": "/static/css/main.f27b30e9.css.map",
-    "main.7fdde260.js.map": "/static/js/main.7fdde260.js.map",
-    "345.a4fdfa0a.chunk.css.map": "/static/css/345.a4fdfa0a.chunk.css.map",
-    "345.6ec3787e.chunk.js.map": "/static/js/345.6ec3787e.chunk.js.map"
+    "main.1a381020.css.map": "/static/css/main.1a381020.css.map",
+    "main.e249d1dc.js.map": "/static/js/main.e249d1dc.js.map",
+    "345.a2f0b7c7.chunk.css.map": "/static/css/345.a2f0b7c7.chunk.css.map",
+    "345.b1f0dd64.chunk.js.map": "/static/js/345.b1f0dd64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f27b30e9.css",
-    "static/js/main.7fdde260.js"
+    "static/css/main.1a381020.css",
+    "static/js/main.e249d1dc.js"
   ]
 }
