@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./ProjectCard.scss";
 import {Fade} from "react-reveal";
 
 export default function ProjectCard({card, isDark}) {
+  const images = card.images || (card.image ? [card.image] : []);
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    if (images.length < 2) return undefined;
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return undefined;
+    }
+    const timer = setInterval(
+      () => setActive(i => (i + 1) % images.length),
+      3500
+    );
+    return () => clearInterval(timer);
+  }, [images.length]);
   const stack = card.stack || [];
   const links = card.links || [];
   const classes = ["project-card-div"];
@@ -12,14 +28,34 @@ export default function ProjectCard({card, isDark}) {
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className={classes.join(" ")}>
-        {card.image && (
+        {images.length > 0 && (
           <div className="project-card-image-div">
-            <img
-              className="project-card-image"
-              src={card.image}
-              alt={card.name}
-              loading="lazy"
-            />
+            {images.map((src, i) => (
+              <img
+                key={src}
+                className={
+                  "project-card-image" + (i === active ? " is-active" : "")
+                }
+                src={src}
+                alt={i === active ? card.name : ""}
+                loading="lazy"
+              />
+            ))}
+            {images.length > 1 && (
+              <div className="project-card-dots">
+                {images.map((src, i) => (
+                  <button
+                    key={src}
+                    type="button"
+                    aria-label={"Show image " + (i + 1)}
+                    className={
+                      "project-card-dot" + (i === active ? " is-active" : "")
+                    }
+                    onClick={() => setActive(i)}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         )}
         <div className="project-card-body">

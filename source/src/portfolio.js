@@ -551,7 +551,10 @@ const projectSection = {
       name: "Solar Panel Cleaning Robot",
       subtitle: "Requirements-driven design and multibody simulation",
       stack: ["SolidWorks", "Simscape Multibody", "MATLAB/Simulink", "ESP32"],
-      image: require("./assets/projects/solar-panel-cleaning-robot.webp"),
+      images: [
+        require("./assets/projects/solar-panel-cleaning-robot.webp"),
+        require("./assets/projects/solar-panel-cleaning-robot-2.webp")
+      ],
       links: [
         {
           name: "GitHub",

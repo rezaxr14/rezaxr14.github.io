@@ -51,6 +51,13 @@
   justify-content: center;
 }
 
+/* Wide desktops: sit flush with the right edge of the page content */
+@media (min-width: 1381px) {
+  .contact-avatar-div {
+    justify-content: flex-end;
+  }
+}
+
 /* Media Query */
 @media (max-width: 1380px), (max-width: 768px) {
   .contact-title {

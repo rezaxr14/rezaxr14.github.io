@@ -8,6 +8,98 @@
 
 .splash-animation-container {
   height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-robot {
+  height: min(100%, 360px);
+  width: auto;
+  overflow: visible;
+}
+
+.robot-float {
+  animation: robot-float 1.6s ease-in-out infinite;
+}
+
+.robot-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: robot-blink 2s ease-in-out infinite;
+}
+
+.robot-antenna {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: robot-pulse 0.9s ease-in-out infinite;
+}
+
+.robot-bar {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: robot-eq 0.8s ease-in-out infinite;
+}
+
+.robot-bar-2 {
+  animation-delay: 0.2s;
+}
+
+.robot-bar-3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes robot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes robot-blink {
+  0%,
+  42%,
+  50%,
+  100% {
+    transform: scaleY(1);
+  }
+  46% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes robot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+@keyframes robot-eq {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .robot-float,
+  .robot-eye,
+  .robot-antenna,
+  .robot-bar {
+    animation: none;
+  }
 }
 
 .splash-title-container {
